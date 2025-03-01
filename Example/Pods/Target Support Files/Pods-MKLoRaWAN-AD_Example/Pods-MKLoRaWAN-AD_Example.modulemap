@@ -1,0 +1,6 @@
+framework module Pods_MKLoRaWAN_AD_Example {
+  umbrella header "Pods-MKLoRaWAN-AD_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
