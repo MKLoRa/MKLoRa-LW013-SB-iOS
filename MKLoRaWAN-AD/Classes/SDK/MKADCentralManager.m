@@ -49,8 +49,6 @@ static dispatch_once_t onceToken;
 
 @property (nonatomic, assign)mk_ad_centralConnectStatus connectStatus;
 
-@property (nonatomic, assign)mk_ad_scanDeviceType scanDeviceType;
-
 @end
 
 @implementation MKADCentralManager
@@ -204,8 +202,7 @@ static dispatch_once_t onceToken;
     : mk_ad_centralManagerStatusUnable;
 }
 
-- (void)startScanWithDeviceType:(mk_ad_scanDeviceType)deviceType {
-    self.scanDeviceType = deviceType;
+- (void)startScan {
     [[MKBLEBaseCentralManager shared] scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"AA18"]] options:nil];
 }
 

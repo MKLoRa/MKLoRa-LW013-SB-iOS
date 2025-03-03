@@ -89,8 +89,6 @@ MKADTabBarControllerDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //记录下来当前设备类型
-    [[NSUserDefaults standardUserDefaults] setObject:@(self.deviceType) forKey:@"ad_deviceType"];
     [self loadSubViews];
     self.searchButton.dataModel = self.buttonModel;
     [self runloopObserver];
@@ -224,7 +222,7 @@ MKADTabBarControllerDelegate>
     if (self.scanTimer) {
         dispatch_cancel(self.scanTimer);
     }
-    [[MKADCentralManager shared] startScanWithDeviceType:self.deviceType];
+    [[MKADCentralManager shared] startScan];
     self.scanTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,dispatch_get_global_queue(0, 0));
     //开始时间
     dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC);

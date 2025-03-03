@@ -17,7 +17,6 @@
 /// 扫描页面
 - (UIViewController *)Action_LoRaWANAD_Module_ScanController:(NSDictionary *)params {
     MKADScanController *vc = [[MKADScanController alloc] init];
-    vc.deviceType = [params[@"deviceType"] integerValue];
     return vc;
 }
 

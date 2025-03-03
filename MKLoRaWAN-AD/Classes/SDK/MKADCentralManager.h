@@ -55,7 +55,7 @@ extern NSString *const mk_ad_deviceDisconnectTypeNotification;
 - (mk_ad_centralManagerStatus )centralStatus;
 
 /// Bluetooth Center starts scanning
-- (void)startScanWithDeviceType:(mk_ad_scanDeviceType)deviceType;
+- (void)startScan;
 
 /// Bluetooth center stops scanning
 - (void)stopScan;

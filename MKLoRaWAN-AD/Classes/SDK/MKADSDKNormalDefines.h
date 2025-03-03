@@ -15,12 +15,6 @@ typedef NS_ENUM(NSInteger, mk_ad_centralManagerStatus) {
     mk_ad_centralManagerStatusEnable,                           //可用状态
 };
 
-typedef NS_ENUM(NSInteger, mk_ad_scanDeviceType) {
-    mk_ad_scanDeviceType_mte,                           //008-MTE
-    mk_ad_scanDeviceType_pte,                           //008-PTE
-    mk_ad_scanDeviceType_bge                            //001-BGE
-};
-
 
 typedef NS_ENUM(NSInteger, mk_ad_magnetTurnOnMethod) {
     mk_ad_magnetTurnOnMethod_multipleApproaches,                           //Multiple approaches
