@@ -67,7 +67,7 @@ MKButtonMsgCellDelegate>
         return [cellModel cellHeightWithContentWidth:kViewWidth];
     }
     
-    return 420.f;
+    return 440.f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

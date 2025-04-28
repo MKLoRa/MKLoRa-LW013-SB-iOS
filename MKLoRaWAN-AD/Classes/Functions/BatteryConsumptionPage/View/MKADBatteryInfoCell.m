@@ -130,7 +130,7 @@
     [self.buzzerNormalLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15.f);
         make.right.mas_equalTo(-15.f);
-        make.top.mas_equalTo(self.greenLightTimeLabel.mas_bottom).mas_offset(10.f);
+        make.top.mas_equalTo(self.blueLightTimeLabel.mas_bottom).mas_offset(10.f);
         make.height.mas_equalTo(MKFont(13.f).lineHeight);
     }];
     [self.buzzerAlarmLabel mas_makeConstraints:^(MASConstraintMaker *make) {
