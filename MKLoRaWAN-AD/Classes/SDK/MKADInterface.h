@@ -259,6 +259,83 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)ad_readLowPowerPayloadIntervalWithSucBlock:(void (^)(id returnData))sucBlock
                                        failedBlock:(void (^)(NSError *error))failedBlock;
 
+/// Low power information packet reporting interval in low power state.
+/*
+ @{
+    @"interval":@"30",  //Unit:x30mins
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerPayloadIntervalWithSucBlock:(void (^)(id returnData))sucBlock
+                                       failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Non-alarm Voltage Threshold.
+/*
+ @{
+    @"threshold":@"58",  //Unit:0.05v   58=2.9v
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerNonAlarmVoltageThresholdWithSucBlock:(void (^)(id returnData))sucBlock
+                                                failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Non-alarm Min. Sample Interval.
+/*
+ @{
+    @"interval":@"60",  //Unit:mins
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerNonAlarmMinSampleIntervalWithSucBlock:(void (^)(id returnData))sucBlock
+                                                 failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Non-alarm Sample Times.
+/*
+ @{
+    @"times":@"10",  //Unit:times
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerNonAlarmSampleTimesWithSucBlock:(void (^)(id returnData))sucBlock
+                                           failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Alarm Voltage Threshold.
+/*
+ @{
+    @"threshold":@"58",  //Unit:0.05v   58=2.9v
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerAlarmVoltageThresholdWithSucBlock:(void (^)(id returnData))sucBlock
+                                             failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Alarm Min. Sample Interval.
+/*
+ @{
+    @"interval":@"60",  //Unit:mins
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerAlarmMinSampleIntervalWithSucBlock:(void (^)(id returnData))sucBlock
+                                              failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Alarm Sample Times.
+/*
+ @{
+    @"times":@"10",  //Unit:times
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_readLowPowerAlarmSampleTimesWithSucBlock:(void (^)(id returnData))sucBlock
+                                        failedBlock:(void (^)(NSError *error))failedBlock;
+
 #pragma mark ****************************************蓝牙相关参数************************************************
 
 /// Is a password required when the device is connected.

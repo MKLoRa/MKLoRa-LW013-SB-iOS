@@ -339,6 +339,42 @@ NSString *const mk_ad_contentKey = @"mk_ad_contentKey";
             @"interval":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
         };
         operationID = mk_ad_taskReadLowPowerPayloadIntervalOperation;
+    }else if ([cmd isEqualToString:@"010a"]) {
+        //读取非报警状态低电判断条件:低电电压值
+        resultDic = @{
+            @"threshold":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
+        };
+        operationID = mk_ad_taskReadLowPowerNonAlarmVoltageThresholdOperation;
+    }else if ([cmd isEqualToString:@"010b"]) {
+        //读取非报警状态低电判断条件:最小采样间隔
+        resultDic = @{
+            @"interval":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
+        };
+        operationID = mk_ad_taskReadLowPowerNonAlarmMinSampleIntervalOperation;
+    }else if ([cmd isEqualToString:@"010c"]) {
+        //读取非报警状态低电判断条件:连续采样次数
+        resultDic = @{
+            @"times":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
+        };
+        operationID = mk_ad_taskReadLowNonAlarmPowerSampleTimesOperation;
+    }else if ([cmd isEqualToString:@"010d"]) {
+        //读取报警状态低电判断条件:低电电压值
+        resultDic = @{
+            @"threshold":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
+        };
+        operationID = mk_ad_taskReadLowPowerAlarmVoltageThresholdOperation;
+    }else if ([cmd isEqualToString:@"010e"]) {
+        //读取报警状态低电判断条件:最小采样间隔
+        resultDic = @{
+            @"interval":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
+        };
+        operationID = mk_ad_taskReadLowPowerAlarmMinSampleIntervalOperation;
+    }else if ([cmd isEqualToString:@"010f"]) {
+        //读取报警状态低电判断条件:连续采样次数
+        resultDic = @{
+            @"times":[MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)],
+        };
+        operationID = mk_ad_taskReadLowAlarmPowerSampleTimesOperation;
     }else if ([cmd isEqualToString:@"0200"]) {
         //读取密码开关
         BOOL need = ([content isEqualToString:@"01"]);
@@ -654,6 +690,24 @@ NSString *const mk_ad_contentKey = @"mk_ad_contentKey";
     }else if ([cmd isEqualToString:@"0107"]) {
         //配置低电状态下低电信息包上报间隔
         operationID = mk_ad_taskConfigLowPowerPayloadIntervalOperation;
+    }else if ([cmd isEqualToString:@"010a"]) {
+        //配置非报警状态低电判断条件:低电电压值
+        operationID = mk_ad_taskConfigLowPowerNonAlarmVoltageThresholdOperation;
+    }else if ([cmd isEqualToString:@"010b"]) {
+        //配置非报警状态低电判断条件:最小采样间隔
+        operationID = mk_ad_taskConfigLowPowerNonAlarmMinSampleIntervalOperation;
+    }else if ([cmd isEqualToString:@"010c"]) {
+        //配置非报警状态低电判断条件:连续采样次数
+        operationID = mk_ad_taskConfigLowPowerNonAlarmSampleTimesOperation;
+    }else if ([cmd isEqualToString:@"010d"]) {
+        //配置报警状态低电判断条件:低电电压值
+        operationID = mk_ad_taskConfigLowPowerAlarmVoltageThresholdOperation;
+    }else if ([cmd isEqualToString:@"010e"]) {
+        //配置报警状态低电判断条件:最小采样间隔
+        operationID = mk_ad_taskConfigLowPowerAlarmMinSampleIntervalOperation;
+    }else if ([cmd isEqualToString:@"010f"]) {
+        //配置报警状态低电判断条件:连续采样次数
+        operationID = mk_ad_taskConfigLowPowerAlarmSampleTimesOperation;
     }else if ([cmd isEqualToString:@"0200"]) {
         //配置是否需要连接密码
         operationID = mk_ad_taskConfigNeedPasswordOperation;

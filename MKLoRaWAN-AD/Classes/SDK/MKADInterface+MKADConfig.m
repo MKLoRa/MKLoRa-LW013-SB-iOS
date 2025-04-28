@@ -193,6 +193,96 @@ static NSInteger const maxDataLen = 100;
                    failedBlock:failedBlock];
 }
 
++ (void)ad_configLowPowerNonAlarmVoltageThreshold:(NSInteger)threshold
+                                         sucBlock:(void (^)(void))sucBlock
+                                      failedBlock:(void (^)(NSError *error))failedBlock {
+    if (threshold < 44 || threshold > 64) {
+        [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *value = [MKBLEBaseSDKAdopter fetchHexValue:threshold byteLen:1];
+    NSString *commandString = [@"ed01010a01" stringByAppendingString:value];
+    [self configDataWithTaskID:mk_ad_taskConfigLowPowerNonAlarmVoltageThresholdOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
++ (void)ad_configLowPowerNonAlarmMinSampleInterval:(NSInteger)interval
+                                          sucBlock:(void (^)(void))sucBlock
+                                       failedBlock:(void (^)(NSError *error))failedBlock {
+    if (interval < 1 || interval > 14400) {
+        [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *value = [MKBLEBaseSDKAdopter fetchHexValue:interval byteLen:2];
+    NSString *commandString = [@"ed01010b02" stringByAppendingString:value];
+    [self configDataWithTaskID:mk_ad_taskConfigLowPowerNonAlarmMinSampleIntervalOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
++ (void)ad_configLowPowerNonAlarmSampleTimes:(NSInteger)times
+                                    sucBlock:(void (^)(void))sucBlock
+                                 failedBlock:(void (^)(NSError *error))failedBlock {
+    if (times < 1 || times > 100) {
+        [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *value = [MKBLEBaseSDKAdopter fetchHexValue:times byteLen:1];
+    NSString *commandString = [@"ed01010c01" stringByAppendingString:value];
+    [self configDataWithTaskID:mk_ad_taskConfigLowPowerNonAlarmSampleTimesOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
++ (void)ad_configLowPowerAlarmVoltageThreshold:(NSInteger)threshold
+                                      sucBlock:(void (^)(void))sucBlock
+                                   failedBlock:(void (^)(NSError *error))failedBlock {
+    if (threshold < 44 || threshold > 64) {
+        [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *value = [MKBLEBaseSDKAdopter fetchHexValue:threshold byteLen:1];
+    NSString *commandString = [@"ed01010d01" stringByAppendingString:value];
+    [self configDataWithTaskID:mk_ad_taskConfigLowPowerAlarmVoltageThresholdOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
++ (void)ad_configLowPowerAlarmMinSampleInterval:(NSInteger)interval
+                                       sucBlock:(void (^)(void))sucBlock
+                                    failedBlock:(void (^)(NSError *error))failedBlock {
+    if (interval < 1 || interval > 14400) {
+        [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *value = [MKBLEBaseSDKAdopter fetchHexValue:interval byteLen:2];
+    NSString *commandString = [@"ed01010e02" stringByAppendingString:value];
+    [self configDataWithTaskID:mk_ad_taskConfigLowPowerAlarmMinSampleIntervalOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
++ (void)ad_configLowPowerAlarmSampleTimes:(NSInteger)times
+                                 sucBlock:(void (^)(void))sucBlock
+                              failedBlock:(void (^)(NSError *error))failedBlock {
+    if (times < 1 || times > 100) {
+        [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *value = [MKBLEBaseSDKAdopter fetchHexValue:times byteLen:1];
+    NSString *commandString = [@"ed01010f01" stringByAppendingString:value];
+    [self configDataWithTaskID:mk_ad_taskConfigLowPowerAlarmSampleTimesOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
 #pragma mark ****************************************蓝牙相关参数************************************************
 
 + (void)ad_configNeedPassword:(BOOL)need

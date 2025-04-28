@@ -121,6 +121,54 @@ NS_ASSUME_NONNULL_BEGIN
                                 sucBlock:(void (^)(void))sucBlock
                              failedBlock:(void (^)(NSError *error))failedBlock;
 
+/// Low Power Non-alarm Voltage Threshold.
+/// @param threshold 44~64,unit:0.05v. 44=2.2v, 64=3.2v.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_configLowPowerNonAlarmVoltageThreshold:(NSInteger)threshold
+                                         sucBlock:(void (^)(void))sucBlock
+                                      failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Non-alarm Min. Sample Interval.
+/// @param interval 1Min~14400Mins.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_configLowPowerNonAlarmMinSampleInterval:(NSInteger)interval
+                                          sucBlock:(void (^)(void))sucBlock
+                                       failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Non-alarm Sample Times.
+/// @param times 1~100.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_configLowPowerNonAlarmSampleTimes:(NSInteger)times
+                                    sucBlock:(void (^)(void))sucBlock
+                                 failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Alarm Voltage Threshold.
+/// @param threshold 44~64,unit:0.05v. 44=2.2v, 64=3.2v.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_configLowPowerAlarmVoltageThreshold:(NSInteger)threshold
+                                      sucBlock:(void (^)(void))sucBlock
+                                   failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Alarm Min. Sample Interval.
+/// @param interval 1Min~14400Mins.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_configLowPowerAlarmMinSampleInterval:(NSInteger)interval
+                                       sucBlock:(void (^)(void))sucBlock
+                                    failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Low Power Alarm Sample Times.
+/// @param times 1~100.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)ad_configLowPowerAlarmSampleTimes:(NSInteger)times
+                                 sucBlock:(void (^)(void))sucBlock
+                              failedBlock:(void (^)(NSError *error))failedBlock;
+
 #pragma mark ****************************************蓝牙相关参数************************************************
 
 /// Do you need a password when configuring the device connection.

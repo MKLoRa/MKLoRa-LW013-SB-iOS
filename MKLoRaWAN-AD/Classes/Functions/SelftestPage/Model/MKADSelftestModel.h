@@ -14,7 +14,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy)NSString *pcbaStatus;
 
+/// 0-2.2v  20-3.2v
+@property (nonatomic, assign)NSInteger nonAlarmVoltageThreshold;
+
+@property (nonatomic, copy)NSString *nonAlarmSampleInterval;
+
+@property (nonatomic, copy)NSString *nonAlarmSampleTimes;
+
+/// 0-2.2v  20-3.2v
+@property (nonatomic, assign)NSInteger alarmVoltageThreshold;
+
+@property (nonatomic, copy)NSString *alarmSampleInterval;
+
+@property (nonatomic, copy)NSString *alarmSampleTimes;
+
 - (void)readDataWithSucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock;;
+
+- (void)configDataWithSucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock;
 
 @end
 

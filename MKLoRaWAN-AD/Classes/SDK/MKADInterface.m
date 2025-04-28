@@ -204,6 +204,54 @@
                  failedBlock:failedBlock];
 }
 
++ (void)ad_readLowPowerNonAlarmVoltageThresholdWithSucBlock:(void (^)(id returnData))sucBlock
+                                                failedBlock:(void (^)(NSError *error))failedBlock {
+    [self readDataWithTaskID:mk_ad_taskReadLowPowerNonAlarmVoltageThresholdOperation
+                     cmdFlag:@"010a"
+                    sucBlock:sucBlock
+                 failedBlock:failedBlock];
+}
+
++ (void)ad_readLowPowerNonAlarmMinSampleIntervalWithSucBlock:(void (^)(id returnData))sucBlock
+                                                 failedBlock:(void (^)(NSError *error))failedBlock {
+    [self readDataWithTaskID:mk_ad_taskReadLowPowerNonAlarmMinSampleIntervalOperation
+                     cmdFlag:@"010b"
+                    sucBlock:sucBlock
+                 failedBlock:failedBlock];
+}
+
++ (void)ad_readLowPowerNonAlarmSampleTimesWithSucBlock:(void (^)(id returnData))sucBlock
+                                           failedBlock:(void (^)(NSError *error))failedBlock {
+    [self readDataWithTaskID:mk_ad_taskReadLowNonAlarmPowerSampleTimesOperation
+                     cmdFlag:@"010c"
+                    sucBlock:sucBlock
+                 failedBlock:failedBlock];
+}
+
++ (void)ad_readLowPowerAlarmVoltageThresholdWithSucBlock:(void (^)(id returnData))sucBlock
+                                             failedBlock:(void (^)(NSError *error))failedBlock {
+    [self readDataWithTaskID:mk_ad_taskReadLowPowerAlarmVoltageThresholdOperation
+                     cmdFlag:@"010d"
+                    sucBlock:sucBlock
+                 failedBlock:failedBlock];
+}
+
++ (void)ad_readLowPowerAlarmMinSampleIntervalWithSucBlock:(void (^)(id returnData))sucBlock
+                                              failedBlock:(void (^)(NSError *error))failedBlock {
+    [self readDataWithTaskID:mk_ad_taskReadLowPowerAlarmMinSampleIntervalOperation
+                     cmdFlag:@"010e"
+                    sucBlock:sucBlock
+                 failedBlock:failedBlock];
+}
+
++ (void)ad_readLowPowerAlarmSampleTimesWithSucBlock:(void (^)(id returnData))sucBlock
+                                        failedBlock:(void (^)(NSError *error))failedBlock {
+    [self readDataWithTaskID:mk_ad_taskReadLowAlarmPowerSampleTimesOperation
+                     cmdFlag:@"010f"
+                    sucBlock:sucBlock
+                 failedBlock:failedBlock];
+}
+
 #pragma mark ****************************************蓝牙相关参数************************************************
 
 + (void)ad_readConnectationNeedPasswordWithSucBlock:(void (^)(id returnData))sucBlock

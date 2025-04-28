@@ -31,6 +31,14 @@ typedef NS_ENUM(NSInteger, mk_ad_taskOperationID) {
     mk_ad_taskReadLowPowerPromptOperation,              //读取电池消耗低电百分比
     mk_ad_taskReadLowPowerPayloadStatusOperation,   //读取低电触发心跳开关状态
     mk_ad_taskReadLowPowerPayloadIntervalOperation,     //读取低电状态下低电信息包上报间隔
+    mk_ad_taskReadLowPowerNonAlarmVoltageThresholdOperation,    //读取非报警状态低电判断条件:低电电压值
+    mk_ad_taskReadLowPowerNonAlarmMinSampleIntervalOperation,          //读取非报警状态低电判断条件:最小采样间隔
+    mk_ad_taskReadLowNonAlarmPowerSampleTimesOperation,                 //读取非报警状态低电判断条件:连续采样次数
+    mk_ad_taskReadLowPowerAlarmVoltageThresholdOperation,           //读取报警状态低电判断条件:低电电压值
+    mk_ad_taskReadLowPowerAlarmMinSampleIntervalOperation,          //读取报警状态低电判断条件:最小采样间隔
+    mk_ad_taskReadLowAlarmPowerSampleTimesOperation,                //读取报警状态低电判断条件:连续采样次数
+
+
     
 #pragma mark - 蓝牙参数读取
     mk_ad_taskReadConnectationNeedPasswordOperation,    //读取连接是否需要密码
@@ -59,6 +67,13 @@ typedef NS_ENUM(NSInteger, mk_ad_taskOperationID) {
     mk_ad_taskConfigLowPowerPromptOperation,            //配置低电百分比
     mk_ad_taskConfigLowPowerPayloadStatusOperation,     //配置低电触发心跳开关状态
     mk_ad_taskConfigLowPowerPayloadIntervalOperation,   //配置低电状态下低电信息包上报间隔
+    mk_ad_taskConfigLowPowerNonAlarmVoltageThresholdOperation,  //配置非报警状态低电判断条件:低电电压值
+    mk_ad_taskConfigLowPowerNonAlarmMinSampleIntervalOperation,         //配置非报警状态低电判断条件:最小采样间隔
+    mk_ad_taskConfigLowPowerNonAlarmSampleTimesOperation,               //配置非报警状态低电判断条件:连续采样次数
+    mk_ad_taskConfigLowPowerAlarmVoltageThresholdOperation,          //配置报警状态低电判断条件:低电电压值
+    mk_ad_taskConfigLowPowerAlarmMinSampleIntervalOperation,         //配置报警状态低电判断条件:最小采样间隔
+    mk_ad_taskConfigLowPowerAlarmSampleTimesOperation,               //配置报警状态低电判断条件:连续采样次数
+
     
     
 #pragma mark - 蓝牙参数配置

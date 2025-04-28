@@ -59,6 +59,7 @@
 #import "MKADSelftestModel.h"
 #import "MKADPCBAStatusCell.h"
 #import "MKADSelftestCell.h"
+#import "MKADSelftestVoltageThresholdCell.h"
 #import "MKADTabBarController.h"
 #import "MKADUpdateController.h"
 #import "MKADDFUModule.h"
