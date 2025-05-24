@@ -245,9 +245,9 @@ MKTextFieldCellDelegate>
 - (void)mk_deviceTextCellValueChanged:(NSInteger)index textValue:(NSString *)value {
     if (index == 0) {
         //Low-power Prompt
-        self.dataModel.prompt = value;
-        MKTextFieldCellModel *cellModel = self.section3List[0];
-        cellModel.textFieldValue = value;
+//        self.dataModel.prompt = value;
+//        MKTextFieldCellModel *cellModel = self.section3List[0];
+//        cellModel.textFieldValue = value;
         return;
     }
     if (index == 1) {
@@ -294,10 +294,10 @@ MKTextFieldCellDelegate>
     MKTextSwitchCellModel *lowPowerPayloadModel = self.section2List[0];
     lowPowerPayloadModel.isOn = self.dataModel.lowPowerPayload;
     
-    MKTextFieldCellModel *promtModel = self.section3List[0];
-    promtModel.textFieldValue = self.dataModel.prompt;
+//    MKTextFieldCellModel *promtModel = self.section3List[0];
+//    promtModel.textFieldValue = self.dataModel.prompt;
         
-    MKTextFieldCellModel *intervalModel = self.section3List[1];
+    MKTextFieldCellModel *intervalModel = self.section3List[0];
     intervalModel.textFieldValue = self.dataModel.interval;
     
     [self.tableView reloadData];
@@ -375,15 +375,15 @@ MKTextFieldCellDelegate>
 }
 
 - (void)loadSection3Datas {
-    MKTextFieldCellModel *cellModel1 = [[MKTextFieldCellModel alloc] init];
-    cellModel1.index = 0;
-    cellModel1.msg = @"Low Power Prompt";
-    cellModel1.textPlaceholder = @"30~99";
-    cellModel1.textFieldType = mk_realNumberOnly;
-    cellModel1.maxLength = 2;
-    cellModel1.unit = @"%";
-    [self.section3List addObject:cellModel1];
-    
+//    MKTextFieldCellModel *cellModel1 = [[MKTextFieldCellModel alloc] init];
+//    cellModel1.index = 0;
+//    cellModel1.msg = @"Low Power Prompt";
+//    cellModel1.textPlaceholder = @"30~99";
+//    cellModel1.textFieldType = mk_realNumberOnly;
+//    cellModel1.maxLength = 2;
+//    cellModel1.unit = @"%";
+//    [self.section3List addObject:cellModel1];
+//    
     MKTextFieldCellModel *cellModel2 = [[MKTextFieldCellModel alloc] init];
     cellModel2.index = 1;
     cellModel2.msg = @"Low-power Report Interval";

@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
                                       failedBlock:(void (^)(NSError *error))failedBlock;
 
 /// Low Power Non-alarm Min. Sample Interval.
-/// @param interval 1Min~14400Mins.
+/// @param interval 1Min~1440Mins.
 /// @param sucBlock Success callback
 /// @param failedBlock Failure callback
 + (void)ad_configLowPowerNonAlarmMinSampleInterval:(NSInteger)interval
@@ -154,7 +154,7 @@ NS_ASSUME_NONNULL_BEGIN
                                    failedBlock:(void (^)(NSError *error))failedBlock;
 
 /// Low Power Alarm Min. Sample Interval.
-/// @param interval 1Min~14400Mins.
+/// @param interval 1Min~1440Mins.
 /// @param sucBlock Success callback
 /// @param failedBlock Failure callback
 + (void)ad_configLowPowerAlarmMinSampleInterval:(NSInteger)interval

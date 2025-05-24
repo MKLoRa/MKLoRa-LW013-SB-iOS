@@ -115,6 +115,13 @@
         _textField = [MKCustomUIAdopter customNormalTextFieldWithText:@""
                                                           placeHolder:@"10~15"
                                                              textType:mk_realNumberOnly];
+        @weakify(self);
+        _textField.textChangedBlock = ^(NSString * _Nonnull text) {
+            @strongify(self);
+            if ([self.delegate respondsToSelector:@selector(ad_alarmLongPressCell_timeChanged:)]) {
+                [self.delegate ad_alarmLongPressCell_timeChanged:text];
+            }
+        };
         _textField.font = MKFont(13.f);
         _textField.maxLength = 2;
     }

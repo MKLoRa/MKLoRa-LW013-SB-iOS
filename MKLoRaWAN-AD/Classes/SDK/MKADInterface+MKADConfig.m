@@ -211,7 +211,7 @@ static NSInteger const maxDataLen = 100;
 + (void)ad_configLowPowerNonAlarmMinSampleInterval:(NSInteger)interval
                                           sucBlock:(void (^)(void))sucBlock
                                        failedBlock:(void (^)(NSError *error))failedBlock {
-    if (interval < 1 || interval > 14400) {
+    if (interval < 1 || interval > 1440) {
         [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
         return;
     }
@@ -256,7 +256,7 @@ static NSInteger const maxDataLen = 100;
 + (void)ad_configLowPowerAlarmMinSampleInterval:(NSInteger)interval
                                        sucBlock:(void (^)(void))sucBlock
                                     failedBlock:(void (^)(NSError *error))failedBlock {
-    if (interval < 1 || interval > 14400) {
+    if (interval < 1 || interval > 1440) {
         [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
         return;
     }

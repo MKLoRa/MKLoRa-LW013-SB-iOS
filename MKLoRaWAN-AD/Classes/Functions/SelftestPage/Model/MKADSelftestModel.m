@@ -320,7 +320,7 @@
     if (self.nonAlarmVoltageThreshold < 0 || self.nonAlarmVoltageThreshold > 20) {
         return NO;
     }
-    if (!ValidStr(self.nonAlarmSampleInterval) || [self.nonAlarmSampleInterval integerValue] < 1 || [self.nonAlarmSampleInterval integerValue] > 14400) {
+    if (!ValidStr(self.nonAlarmSampleInterval) || [self.nonAlarmSampleInterval integerValue] < 1 || [self.nonAlarmSampleInterval integerValue] > 1440) {
         return NO;
     }
     if (!ValidStr(self.nonAlarmSampleTimes) || [self.nonAlarmSampleTimes integerValue] < 1 || [self.nonAlarmSampleTimes integerValue] > 100) {
@@ -329,7 +329,7 @@
     if (self.alarmVoltageThreshold < 0 || self.alarmVoltageThreshold > 20) {
         return NO;
     }
-    if (!ValidStr(self.alarmSampleInterval) || [self.alarmSampleInterval integerValue] < 1 || [self.alarmSampleInterval integerValue] > 14400) {
+    if (!ValidStr(self.alarmSampleInterval) || [self.alarmSampleInterval integerValue] < 1 || [self.alarmSampleInterval integerValue] > 1440) {
         return NO;
     }
     if (!ValidStr(self.alarmSampleTimes) || [self.alarmSampleTimes integerValue] < 1 || [self.alarmSampleTimes integerValue] > 100) {

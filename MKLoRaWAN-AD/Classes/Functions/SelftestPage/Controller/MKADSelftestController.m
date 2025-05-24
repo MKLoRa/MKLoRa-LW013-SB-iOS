@@ -276,9 +276,9 @@ MKADSelftestVoltageThresholdCellDelegate>
     MKTextFieldCellModel *cellModel1 = [[MKTextFieldCellModel alloc] init];
     cellModel1.index = 0;
     cellModel1.msg = @"Min. Sample Interval";
-    cellModel1.textPlaceholder = @"1~14400";
+    cellModel1.textPlaceholder = @"1~1440";
     cellModel1.textFieldType = mk_realNumberOnly;
-    cellModel1.maxLength = 5;
+    cellModel1.maxLength = 4;
     cellModel1.unit = @"Mins";
     cellModel1.textFieldValue = self.dataModel.nonAlarmSampleInterval;
     [self.section3List addObject:cellModel1];
@@ -306,9 +306,9 @@ MKADSelftestVoltageThresholdCellDelegate>
     MKTextFieldCellModel *cellModel1 = [[MKTextFieldCellModel alloc] init];
     cellModel1.index = 2;
     cellModel1.msg = @"Min. Sample Interval";
-    cellModel1.textPlaceholder = @"1~14400";
+    cellModel1.textPlaceholder = @"1~1440";
     cellModel1.textFieldType = mk_realNumberOnly;
-    cellModel1.maxLength = 5;
+    cellModel1.maxLength = 4;
     cellModel1.unit = @"Mins";
     cellModel1.textFieldValue = self.dataModel.alarmSampleInterval;
     [self.section5List addObject:cellModel1];

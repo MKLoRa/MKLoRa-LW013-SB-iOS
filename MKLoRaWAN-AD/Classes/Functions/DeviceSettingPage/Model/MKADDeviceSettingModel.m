@@ -37,10 +37,7 @@
             [self operationFailedBlockWithMsg:@"Read Low-power Report Interval Error" block:failedBlock];
             return;
         }
-        if (![self readLowPowerPrompt]) {
-            [self operationFailedBlockWithMsg:@"Read Low-power Prompt Error" block:failedBlock];
-            return;
-        }
+        
         moko_dispatch_main_safe(^{
             if (sucBlock) {
                 sucBlock();
@@ -67,10 +64,7 @@
             [self operationFailedBlockWithMsg:@"Config Low-power Report Interval Error" block:failedBlock];
             return;
         }
-        if (![self configLowPowerPrompt]) {
-            [self operationFailedBlockWithMsg:@"Config Low-power Prompt Error" block:failedBlock];
-            return;
-        }
+        
         moko_dispatch_main_safe(^{
             if (sucBlock) {
                 sucBlock();
@@ -155,31 +149,6 @@
     return success;
 }
 
-- (BOOL)readLowPowerPrompt {
-    __block BOOL success = NO;
-    [MKADInterface ad_readLowPowerPromptWithSucBlock:^(id  _Nonnull returnData) {
-        success = YES;
-        self.prompt = returnData[@"result"][@"prompt"];
-        dispatch_semaphore_signal(self.semaphore);
-    } failedBlock:^(NSError * _Nonnull error) {
-        dispatch_semaphore_signal(self.semaphore);
-    }];
-    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-    return success;
-}
-
-- (BOOL)configLowPowerPrompt {
-    __block BOOL success = NO;
-    [MKADInterface ad_configLowPowerPrompt:[self.prompt integerValue] sucBlock:^{
-        success = YES;
-        dispatch_semaphore_signal(self.semaphore);
-    } failedBlock:^(NSError * _Nonnull error) {
-        dispatch_semaphore_signal(self.semaphore);
-    }];
-    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-    return success;
-}
-
 #pragma mark - private method
 - (void)operationFailedBlockWithMsg:(NSString *)msg block:(void (^)(NSError *error))block {
     moko_dispatch_main_safe(^{
@@ -192,9 +161,6 @@
 
 - (BOOL)validParams {
     if (!ValidStr(self.interval) || [self.interval integerValue] < 1 || [self.interval integerValue] > 255) {
-        return NO;
-    }
-    if (!ValidStr(self.prompt) || [self.prompt integerValue] < 30 || [self.prompt integerValue] > 99) {
         return NO;
     }
     

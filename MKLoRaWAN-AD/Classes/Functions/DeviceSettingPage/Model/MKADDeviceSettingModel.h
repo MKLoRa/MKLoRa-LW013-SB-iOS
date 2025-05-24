@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign)BOOL lowPowerPayload;
 
-@property (nonatomic, copy)NSString *prompt;
-
 @property (nonatomic, copy)NSString *interval;
 
 - (void)readDataWithSucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock;
