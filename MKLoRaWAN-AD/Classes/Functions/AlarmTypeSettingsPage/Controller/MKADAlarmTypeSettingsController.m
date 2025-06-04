@@ -210,8 +210,8 @@ MKADAlarmLongPressCellDelegate>
 - (void)ad_alarmLongPressCell_timeChanged:(NSString *)time {
     //Exit Alarm Type
     self.dataModel.time = time;
-    MKTextFieldCellModel *cellModel = self.section4List[0];
-    cellModel.textFieldValue = time;
+    MKADAlarmLongPressCellModel *cellModel = self.section4List[0];
+    cellModel.time = time;
 }
 
 #pragma mark - interface

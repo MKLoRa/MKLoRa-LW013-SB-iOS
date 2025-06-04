@@ -253,7 +253,7 @@ MKTextFieldCellDelegate>
     if (index == 1) {
         //Low-power Report Interval
         self.dataModel.interval = value;
-        MKTextFieldCellModel *cellModel = self.section3List[1];
+        MKTextFieldCellModel *cellModel = self.section3List[0];
         cellModel.textFieldValue = value;
         return;
     }
