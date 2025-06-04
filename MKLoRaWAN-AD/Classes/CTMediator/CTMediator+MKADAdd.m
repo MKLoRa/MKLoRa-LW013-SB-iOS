@@ -12,11 +12,10 @@
 
 @implementation CTMediator (MKADAdd)
 
-- (UIViewController *)CTMediator_LORAWAN_ad_AboutPage {
-    NSInteger deviceType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"ad_deviceType"] integerValue];
+- (UIViewController *)CTMediator_LORAWAN_AD_AboutPage {
     UIViewController *viewController = [self performTarget:kTarget_loRaApp_la_module
                                                     action:kAction_loRaApp_la_aboutPage
-                                                    params:@{@"deviceType":[NSString stringWithFormat:@"%ld",(long)deviceType]}
+                                                    params:@{}
                                          shouldCacheTarget:NO];
     if ([viewController isKindOfClass:[UIViewController class]]) {
         return viewController;
