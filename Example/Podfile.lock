@@ -443,27 +443,7 @@ PODS:
   - MKLoRaWAN-AD/Expand (0.0.1):
     - MKBaseModuleLibrary
     - MKCustomUIModule
-    - MKLoRaWAN-AD/Expand/FilterCell (= 0.0.1)
     - MKLoRaWAN-AD/Expand/TextButtonCell (= 0.0.1)
-  - MKLoRaWAN-AD/Expand/FilterCell (0.0.1):
-    - MKBaseModuleLibrary
-    - MKCustomUIModule
-    - MKLoRaWAN-AD/Expand/FilterCell/FilterBeaconCell (= 0.0.1)
-    - MKLoRaWAN-AD/Expand/FilterCell/FilterByRawDataCell (= 0.0.1)
-    - MKLoRaWAN-AD/Expand/FilterCell/FilterEditSectionHeaderView (= 0.0.1)
-    - MKLoRaWAN-AD/Expand/FilterCell/FilterNormalTextFieldCell (= 0.0.1)
-  - MKLoRaWAN-AD/Expand/FilterCell/FilterBeaconCell (0.0.1):
-    - MKBaseModuleLibrary
-    - MKCustomUIModule
-  - MKLoRaWAN-AD/Expand/FilterCell/FilterByRawDataCell (0.0.1):
-    - MKBaseModuleLibrary
-    - MKCustomUIModule
-  - MKLoRaWAN-AD/Expand/FilterCell/FilterEditSectionHeaderView (0.0.1):
-    - MKBaseModuleLibrary
-    - MKCustomUIModule
-  - MKLoRaWAN-AD/Expand/FilterCell/FilterNormalTextFieldCell (0.0.1):
-    - MKBaseModuleLibrary
-    - MKCustomUIModule
   - MKLoRaWAN-AD/Expand/TextButtonCell (0.0.1):
     - MKBaseModuleLibrary
     - MKCustomUIModule
@@ -1239,7 +1219,7 @@ DEPENDENCIES:
   - MKLoRaWAN-AD (from `../`)
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+  trunk:
     - CircleProgressBar
     - CTMediator
     - FMDB
@@ -1273,13 +1253,13 @@ SPEC CHECKSUMS:
   MKBaseBleModule: 15aa067c4e408a473e025b1a768ebce00a7e5949
   MKBaseModuleLibrary: 2b79bcae588c755588413fbb643b510253271b23
   MKCustomUIModule: 8426eba1d3178b06d92741d31da32502920fb8fa
-  MKLoRaWAN-AD: 4f896d29310d6ab3fbb5f0c826e8011250c94945
+  MKLoRaWAN-AD: b80f8b5dac4333ee413c9cf2df311e024d1a7d7c
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
   WRNavigationBar: 10bfdf96addf14d640d07c2ef08a029c18d8af10
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: e51abbfa9f6ec767935e9a0f63624fd60622bc1a
+PODFILE CHECKSUM: 528fc7084d0325e1cec575dc53118ccbcd27e1eb
 
-COCOAPODS: 1.16.1
+COCOAPODS: 1.16.2

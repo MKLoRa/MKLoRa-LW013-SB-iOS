@@ -28,23 +28,15 @@
       "name": "CTMediator",
       "source_files": "MKLoRaWAN-AD/Classes/CTMediator/**",
       "dependencies": {
-        "MKBaseModuleLibrary": [
-
-        ],
-        "CTMediator": [
-
-        ]
+        "MKBaseModuleLibrary": [],
+        "CTMediator": []
       }
     },
     {
       "name": "DatabaseManager",
       "dependencies": {
-        "MKBaseModuleLibrary": [
-
-        ],
-        "FMDB": [
-
-        ]
+        "MKBaseModuleLibrary": [],
+        "FMDB": []
       },
       "subspecs": [
         {
@@ -61,100 +53,49 @@
       "name": "SDK",
       "source_files": "MKLoRaWAN-AD/Classes/SDK/**",
       "dependencies": {
-        "MKBaseBleModule": [
-
-        ]
+        "MKBaseBleModule": []
       }
     },
     {
       "name": "Target",
       "source_files": "MKLoRaWAN-AD/Classes/Target/**",
       "dependencies": {
-        "MKLoRaWAN-AD/Functions": [
-
-        ]
+        "MKLoRaWAN-AD/Functions": []
       }
     },
     {
       "name": "ConnectModule",
       "source_files": "MKLoRaWAN-AD/Classes/ConnectModule/**",
       "dependencies": {
-        "MKLoRaWAN-AD/SDK": [
-
-        ],
-        "MKBaseModuleLibrary": [
-
-        ]
+        "MKLoRaWAN-AD/SDK": [],
+        "MKBaseModuleLibrary": []
       }
     },
     {
       "name": "Expand",
       "dependencies": {
-        "MKBaseModuleLibrary": [
-
-        ],
-        "MKCustomUIModule": [
-
-        ]
+        "MKBaseModuleLibrary": [],
+        "MKCustomUIModule": []
       },
       "subspecs": [
         {
           "name": "TextButtonCell",
           "source_files": "MKLoRaWAN-AD/Classes/Expand/TextButtonCell/**"
-        },
-        {
-          "name": "FilterCell",
-          "subspecs": [
-            {
-              "name": "FilterBeaconCell",
-              "source_files": "MKLoRaWAN-AD/Classes/Expand/FilterCell/FilterBeaconCell/**"
-            },
-            {
-              "name": "FilterByRawDataCell",
-              "source_files": "MKLoRaWAN-AD/Classes/Expand/FilterCell/FilterByRawDataCell/**"
-            },
-            {
-              "name": "FilterEditSectionHeaderView",
-              "source_files": "MKLoRaWAN-AD/Classes/Expand/FilterCell/FilterEditSectionHeaderView/**"
-            },
-            {
-              "name": "FilterNormalTextFieldCell",
-              "source_files": "MKLoRaWAN-AD/Classes/Expand/FilterCell/FilterNormalTextFieldCell/**"
-            }
-          ]
         }
       ]
     },
     {
       "name": "Functions",
       "dependencies": {
-        "MKLoRaWAN-AD/SDK": [
-
-        ],
-        "MKLoRaWAN-AD/DatabaseManager": [
-
-        ],
-        "MKLoRaWAN-AD/CTMediator": [
-
-        ],
-        "MKLoRaWAN-AD/ConnectModule": [
-
-        ],
-        "MKLoRaWAN-AD/Expand": [
-
-        ],
-        "MKBaseModuleLibrary": [
-
-        ],
-        "MKCustomUIModule": [
-
-        ],
-        "HHTransition": [
-
-        ],
-        "MLInputDodger": [
-
-        ],
+        "MKLoRaWAN-AD/SDK": [],
+        "MKLoRaWAN-AD/DatabaseManager": [],
+        "MKLoRaWAN-AD/CTMediator": [],
+        "MKLoRaWAN-AD/ConnectModule": [],
+        "MKLoRaWAN-AD/Expand": [],
+        "MKBaseModuleLibrary": [],
+        "MKCustomUIModule": [],
+        "HHTransition": [],
+        "MLInputDodger": [],
         "iOSDFULibrary": [
           "4.13.0"
         ]
@@ -176,9 +117,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/AlarmReportSettingsPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/AlarmTypeSettingsPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/AlarmTypeSettingsPage/Controller": []
               }
             }
           ]
@@ -190,12 +129,8 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/AlarmTypeSettingsPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/AlarmTypeSettingsPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/AlarmTypeSettingsPage/View": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/AlarmTypeSettingsPage/Model": [],
+                "MKLoRaWAN-AD/Functions/AlarmTypeSettingsPage/View": []
               }
             },
             {
@@ -215,12 +150,8 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/BatteryConsumptionPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/BatteryConsumptionPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/BatteryConsumptionPage/View": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/BatteryConsumptionPage/Model": [],
+                "MKLoRaWAN-AD/Functions/BatteryConsumptionPage/View": []
               }
             },
             {
@@ -240,12 +171,8 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/BleSettingsPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/BleSettingsPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/BleSettingsPage/View": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/BleSettingsPage/Model": [],
+                "MKLoRaWAN-AD/Functions/BleSettingsPage/View": []
               }
             },
             {
@@ -265,9 +192,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/DebuggerPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/DebuggerPage/View": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/DebuggerPage/View": []
               }
             },
             {
@@ -283,21 +208,11 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/DeviceInfoPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/DeviceInfoPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/UpdatePage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/SelftestPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/DebuggerPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/BatteryConsumptionPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/DeviceInfoPage/Model": [],
+                "MKLoRaWAN-AD/Functions/UpdatePage/Controller": [],
+                "MKLoRaWAN-AD/Functions/SelftestPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/DebuggerPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/BatteryConsumptionPage/Controller": []
               }
             },
             {
@@ -313,18 +228,10 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/DeviceSettingPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/DeviceSettingPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/IndicatorSettingsPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/DeviceInfoPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/OnOffSettingsPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/DeviceSettingPage/Model": [],
+                "MKLoRaWAN-AD/Functions/IndicatorSettingsPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/DeviceInfoPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/OnOffSettingsPage/Controller": []
               }
             },
             {
@@ -340,15 +247,9 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/GeneralPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/GeneralPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/AlarmReportSettingsPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/BleSettingsPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/GeneralPage/Model": [],
+                "MKLoRaWAN-AD/Functions/AlarmReportSettingsPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/BleSettingsPage/Controller": []
               }
             },
             {
@@ -364,9 +265,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/IndicatorSettingsPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/IndicatorSettingsPage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/IndicatorSettingsPage/Model": []
               }
             },
             {
@@ -382,12 +281,8 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/LoRaApplicationPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/LoRaApplicationPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/MessageTypePage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/LoRaApplicationPage/Model": [],
+                "MKLoRaWAN-AD/Functions/MessageTypePage/Controller": []
               }
             },
             {
@@ -403,15 +298,9 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/LoRaPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/LoRaPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/LoRaSettingPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/LoRaApplicationPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/LoRaPage/Model": [],
+                "MKLoRaWAN-AD/Functions/LoRaSettingPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/LoRaApplicationPage/Controller": []
               }
             },
             {
@@ -427,9 +316,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/LoRaSettingPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/LoRaSettingPage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/LoRaSettingPage/Model": []
               }
             },
             {
@@ -445,9 +332,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/MessageTypePage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/MessageTypePage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/MessageTypePage/Model": []
               }
             },
             {
@@ -463,9 +348,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/OnOffSettingsPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/OnOffSettingsPage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/OnOffSettingsPage/Model": []
               }
             },
             {
@@ -481,15 +364,9 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/ScanPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/ScanPage/Model": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/ScanPage/View": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/TabBarPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/ScanPage/Model": [],
+                "MKLoRaWAN-AD/Functions/ScanPage/View": [],
+                "MKLoRaWAN-AD/Functions/TabBarPage/Controller": []
               }
             },
             {
@@ -500,9 +377,7 @@
               "name": "View",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/ScanPage/View/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/ScanPage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/ScanPage/Model": []
               }
             }
           ]
@@ -514,12 +389,8 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/SelftestPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/SelftestPage/View": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/SelftestPage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/SelftestPage/View": [],
+                "MKLoRaWAN-AD/Functions/SelftestPage/Model": []
               }
             },
             {
@@ -539,15 +410,9 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/TabBarPage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/LoRaPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/GeneralPage/Controller": [
-
-                ],
-                "MKLoRaWAN-AD/Functions/DeviceSettingPage/Controller": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/LoRaPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/GeneralPage/Controller": [],
+                "MKLoRaWAN-AD/Functions/DeviceSettingPage/Controller": []
               }
             }
           ]
@@ -559,9 +424,7 @@
               "name": "Controller",
               "source_files": "MKLoRaWAN-AD/Classes/Functions/UpdatePage/Controller/**",
               "dependencies": {
-                "MKLoRaWAN-AD/Functions/UpdatePage/Model": [
-
-                ]
+                "MKLoRaWAN-AD/Functions/UpdatePage/Model": []
               }
             },
             {
