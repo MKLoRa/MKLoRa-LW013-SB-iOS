@@ -731,7 +731,7 @@ static NSInteger const maxDataLen = 100;
                               alarmType:(mk_ad_alarmType)alarmType
                                sucBlock:(void (^)(void))sucBlock
                             failedBlock:(void (^)(NSError *error))failedBlock {
-    if (time < 10 || time > 15) {
+    if (time < 5 || time > 15) {
         [MKBLEBaseSDKAdopter operationParamsErrorBlock:failedBlock];
         return;
     }

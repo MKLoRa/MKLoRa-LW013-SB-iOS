@@ -429,7 +429,7 @@ NS_ASSUME_NONNULL_BEGIN
                             failedBlock:(void (^)(NSError *error))failedBlock;
 
 /// Exit alarm type needs the time of long press.
-/// @param time 10s~15s.
+/// @param time 5s~15s.
 /// @param alarmType mk_ad_alarmType
 /// @param sucBlock Success callback
 /// @param failedBlock Failure callback

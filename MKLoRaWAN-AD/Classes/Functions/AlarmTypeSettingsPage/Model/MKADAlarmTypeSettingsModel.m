@@ -211,7 +211,7 @@
 }
 
 - (BOOL)validParams {
-    if (!ValidStr(self.time) || [self.time integerValue] < 10 || [self.time integerValue] > 15) {
+    if (!ValidStr(self.time) || [self.time integerValue] < 5 || [self.time integerValue] > 15) {
         return NO;
     }
     if (!ValidStr(self.interval) || [self.interval integerValue] < 1 || [self.interval integerValue] > 1440) {

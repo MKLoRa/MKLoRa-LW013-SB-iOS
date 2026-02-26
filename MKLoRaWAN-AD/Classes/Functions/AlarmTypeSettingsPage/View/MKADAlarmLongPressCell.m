@@ -113,7 +113,7 @@
 - (MKTextField *)textField {
     if (!_textField) {
         _textField = [MKCustomUIAdopter customNormalTextFieldWithText:@""
-                                                          placeHolder:@"10~15"
+                                                          placeHolder:@"5~15"
                                                              textType:mk_realNumberOnly];
         @weakify(self);
         _textField.textChangedBlock = ^(NSString * _Nonnull text) {
